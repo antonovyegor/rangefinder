@@ -1,0 +1,65 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "SensorTrig",
+					"strict" : false
+				},
+				{
+					"name" : "Digits_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Digits_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Digits_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Digits_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Segment_out[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Segment_out[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Segment_out[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Segment_out[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Segment_out[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Segment_out[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Segment_out[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Clock",
+					"strict" : false
+				},
+				{
+					"name" : "SensorEcho",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

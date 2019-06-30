@@ -1,0 +1,1252 @@
+Timing Analyzer report for rangefinder
+Sat Jun 29 20:41:02 2019
+Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Timing Closure Recommendations
+  7. Slow 1200mV 85C Model Setup Summary
+  8. Slow 1200mV 85C Model Hold Summary
+  9. Slow 1200mV 85C Model Recovery Summary
+ 10. Slow 1200mV 85C Model Removal Summary
+ 11. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 12. Slow 1200mV 85C Model Setup: 'Clock'
+ 13. Slow 1200mV 85C Model Hold: 'Clock'
+ 14. Slow 1200mV 85C Model Metastability Summary
+ 15. Slow 1200mV 0C Model Fmax Summary
+ 16. Slow 1200mV 0C Model Setup Summary
+ 17. Slow 1200mV 0C Model Hold Summary
+ 18. Slow 1200mV 0C Model Recovery Summary
+ 19. Slow 1200mV 0C Model Removal Summary
+ 20. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 21. Slow 1200mV 0C Model Setup: 'Clock'
+ 22. Slow 1200mV 0C Model Hold: 'Clock'
+ 23. Slow 1200mV 0C Model Metastability Summary
+ 24. Fast 1200mV 0C Model Setup Summary
+ 25. Fast 1200mV 0C Model Hold Summary
+ 26. Fast 1200mV 0C Model Recovery Summary
+ 27. Fast 1200mV 0C Model Removal Summary
+ 28. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 29. Fast 1200mV 0C Model Setup: 'Clock'
+ 30. Fast 1200mV 0C Model Hold: 'Clock'
+ 31. Fast 1200mV 0C Model Metastability Summary
+ 32. Multicorner Timing Analysis Summary
+ 33. Board Trace Model Assignments
+ 34. Input Transition Times
+ 35. Signal Integrity Metrics (Slow 1200mv 0c Model)
+ 36. Signal Integrity Metrics (Slow 1200mv 85c Model)
+ 37. Signal Integrity Metrics (Fast 1200mv 0c Model)
+ 38. Setup Transfers
+ 39. Hold Transfers
+ 40. Report TCCS
+ 41. Report RSKM
+ 42. Unconstrained Paths Summary
+ 43. Clock Status Summary
+ 44. Unconstrained Input Ports
+ 45. Unconstrained Output Ports
+ 46. Unconstrained Input Ports
+ 47. Unconstrained Output Ports
+ 48. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++-----------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                     ;
++-----------------------+-----------------------------------------------------+
+; Quartus Prime Version ; Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
+; Timing Analyzer       ; Legacy Timing Analyzer                              ;
+; Revision Name         ; rangefinder                                         ;
+; Device Family         ; Cyclone IV E                                        ;
+; Device Name           ; EP4CE6E22C8                                         ;
+; Timing Models         ; Final                                               ;
+; Delay Model           ; Combined                                            ;
+; Rise/Fall Delays      ; Enabled                                             ;
++-----------------------+-----------------------------------------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.10        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   5.2%      ;
+;     Processor 3            ;   2.6%      ;
+;     Processor 4            ;   2.6%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { Clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++-------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary              ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 10.39 MHz ; 10.39 MHz       ; Clock      ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
+----------------------------------
+; Timing Closure Recommendations ;
+----------------------------------
+HTML report is unavailable in plain text report export.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+---------+-------------------+
+; Clock ; Slack   ; End Point TNS     ;
++-------+---------+-------------------+
+; Clock ; -95.248 ; -4034.884         ;
++-------+---------+-------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; Clock ; 0.452 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; Clock ; -3.000 ; -345.010                         ;
++-------+--------+----------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'Clock'                                                                                         ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node             ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -95.248 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.636     ;
+; -95.248 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.636     ;
+; -95.247 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.635     ;
+; -95.246 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.634     ;
+; -95.245 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.633     ;
+; -95.244 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.632     ;
+; -95.243 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.631     ;
+; -95.243 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.631     ;
+; -95.088 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.480     ;
+; -95.088 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.480     ;
+; -95.087 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.479     ;
+; -95.086 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.478     ;
+; -95.085 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.477     ;
+; -95.084 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.476     ;
+; -95.083 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.475     ;
+; -95.083 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.475     ;
+; -94.918 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.307     ;
+; -94.918 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.307     ;
+; -94.917 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.306     ;
+; -94.917 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.306     ;
+; -94.917 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.306     ;
+; -94.916 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.305     ;
+; -94.916 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.305     ;
+; -94.915 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.304     ;
+; -94.915 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.304     ;
+; -94.914 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.303     ;
+; -94.914 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.303     ;
+; -94.913 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.302     ;
+; -94.913 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.302     ;
+; -94.913 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.302     ;
+; -94.912 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.301     ;
+; -94.912 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.301     ;
+; -94.909 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.298     ;
+; -94.909 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.298     ;
+; -94.908 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.297     ;
+; -94.907 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.296     ;
+; -94.906 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.295     ;
+; -94.905 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.294     ;
+; -94.904 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.293     ;
+; -94.904 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.293     ;
+; -94.867 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.254     ;
+; -94.867 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.254     ;
+; -94.866 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.253     ;
+; -94.865 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.252     ;
+; -94.864 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.251     ;
+; -94.863 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.250     ;
+; -94.862 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.249     ;
+; -94.862 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 96.249     ;
+; -94.784 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.173     ;
+; -94.784 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.173     ;
+; -94.783 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.172     ;
+; -94.782 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.171     ;
+; -94.781 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.170     ;
+; -94.780 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.169     ;
+; -94.779 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.168     ;
+; -94.779 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 96.168     ;
+; -94.774 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.162     ;
+; -94.718 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.106     ;
+; -94.632 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.064     ; 95.569     ;
+; -94.627 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 96.015     ;
+; -94.614 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 96.006     ;
+; -94.576 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.965     ;
+; -94.576 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.965     ;
+; -94.575 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.964     ;
+; -94.574 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.963     ;
+; -94.573 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.962     ;
+; -94.572 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.961     ;
+; -94.571 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.960     ;
+; -94.571 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.960     ;
+; -94.558 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 95.950     ;
+; -94.472 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.060     ; 95.413     ;
+; -94.467 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.391      ; 95.859     ;
+; -94.444 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.833     ;
+; -94.443 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.832     ;
+; -94.435 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.824     ;
+; -94.431 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[18] ; Clock        ; Clock       ; 1.000        ; 0.389      ; 95.821     ;
+; -94.429 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[9]  ; Clock        ; Clock       ; 1.000        ; -0.064     ; 95.366     ;
+; -94.416 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[19] ; Clock        ; Clock       ; 1.000        ; 0.389      ; 95.806     ;
+; -94.393 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.780     ;
+; -94.388 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.777     ;
+; -94.387 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.776     ;
+; -94.379 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.768     ;
+; -94.365 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[16] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 95.753     ;
+; -94.360 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[8]  ; Clock        ; Clock       ; 1.000        ; 0.350      ; 95.711     ;
+; -94.345 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[14] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 95.733     ;
+; -94.337 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.724     ;
+; -94.330 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.717     ;
+; -94.330 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.717     ;
+; -94.329 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.716     ;
+; -94.328 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.715     ;
+; -94.327 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.714     ;
+; -94.326 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.713     ;
+; -94.325 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.712     ;
+; -94.325 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.386      ; 95.712     ;
+; -94.322 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[13] ; Clock        ; Clock       ; 1.000        ; 0.387      ; 95.710     ;
+; -94.321 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[7]  ; Clock        ; Clock       ; 1.000        ; -0.064     ; 95.258     ;
+; -94.310 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.699     ;
+; -94.302 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.063     ; 95.240     ;
+; -94.301 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.063     ; 95.239     ;
+; -94.297 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.388      ; 95.686     ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'Clock'                                                                                             ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 0.452 ; fsm.P1                  ; fsm.P1                  ; Clock        ; Clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; fsm.idle                ; fsm.idle                ; Clock        ; Clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.452 ; \process_2:count[0]     ; \process_2:count[0]     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 0.746      ;
+; 0.453 ; SensorRT:U1|Ready       ; SensorRT:U1|Ready       ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Waiting ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|fsm.Rec     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; SensorRT:U1|fsm.Idle    ; SensorRT:U1|fsm.Idle    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; digit[3]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; digit[2]                ; digit[2]                ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; digit[1]                ; digit[1]                ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.453 ; SensorRT:U1|fsm.Trans   ; SensorRT:U1|fsm.Trans   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.746      ;
+; 0.465 ; digit[0]                ; digit[0]                ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.758      ;
+; 0.500 ; digit[2]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.793      ;
+; 0.518 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Rec     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.811      ;
+; 0.525 ; count[0]                ; Digits_out[0]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 0.819      ;
+; 0.526 ; count[0]                ; Digits_out[2]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 0.820      ;
+; 0.527 ; count[0]                ; Digits_out[1]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 0.821      ;
+; 0.527 ; count[0]                ; Digits_out[3]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 0.821      ;
+; 0.550 ; SensorRT:U1|fsm.Idle    ; SensorRT:U1|Ready       ; Clock        ; Clock       ; 0.000        ; 0.081      ; 0.843      ;
+; 0.744 ; digit[0]                ; numbers_array[0][0]     ; Clock        ; Clock       ; 0.000        ; 0.084      ; 1.040      ;
+; 0.744 ; digit[0]                ; numbers_array[1][0]     ; Clock        ; Clock       ; 0.000        ; 0.084      ; 1.040      ;
+; 0.745 ; fsm.P1                  ; fsm.P2                  ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.039      ;
+; 0.746 ; \process_1:count[10]    ; \process_1:count[10]    ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.038      ;
+; 0.746 ; \process_1:count[9]     ; \process_1:count[9]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.038      ;
+; 0.748 ; \process_1:count[8]     ; \process_1:count[8]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.040      ;
+; 0.760 ; time_count[19]          ; time_count[19]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.054      ;
+; 0.760 ; time_count[3]           ; time_count[3]           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.053      ;
+; 0.760 ; SensorRT:U1|count[1]    ; SensorRT:U1|count[1]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.053      ;
+; 0.761 ; time_count[17]          ; time_count[17]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.055      ;
+; 0.761 ; time_count[29]          ; time_count[29]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.055      ;
+; 0.761 ; time_count[27]          ; time_count[27]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.055      ;
+; 0.761 ; time_count[21]          ; time_count[21]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.055      ;
+; 0.761 ; time_count[13]          ; time_count[13]          ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; time_count[11]          ; time_count[11]          ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; time_count[1]           ; time_count[1]           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.054      ;
+; 0.761 ; SensorRT:U1|count[29]   ; SensorRT:U1|count[29]   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.054      ;
+; 0.762 ; time_count[31]          ; time_count[31]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.056      ;
+; 0.762 ; time_count[16]          ; time_count[16]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.056      ;
+; 0.762 ; \process_1:count[5]     ; \process_1:count[5]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.054      ;
+; 0.762 ; \process_1:count[1]     ; \process_1:count[1]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.054      ;
+; 0.763 ; time_count[23]          ; time_count[23]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; time_count[25]          ; time_count[25]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; time_count[22]          ; time_count[22]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.057      ;
+; 0.763 ; time_count[2]           ; time_count[2]           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; \process_1:count[29]    ; \process_1:count[29]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; \process_1:count[18]    ; \process_1:count[18]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; \process_1:count[16]    ; \process_1:count[16]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.056      ;
+; 0.763 ; \process_1:count[11]    ; \process_1:count[11]    ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; \process_1:count[3]     ; \process_1:count[3]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.055      ;
+; 0.763 ; \process_1:count[2]     ; \process_1:count[2]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.055      ;
+; 0.764 ; time_count[20]          ; time_count[20]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.058      ;
+; 0.764 ; time_count[30]          ; time_count[30]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.058      ;
+; 0.764 ; time_count[14]          ; time_count[14]          ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; time_count[4]           ; time_count[4]           ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; \process_1:count[28]    ; \process_1:count[28]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; \process_1:count[27]    ; \process_1:count[27]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; \process_1:count[26]    ; \process_1:count[26]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.057      ;
+; 0.764 ; \process_1:count[4]     ; \process_1:count[4]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.056      ;
+; 0.765 ; time_count[28]          ; time_count[28]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.059      ;
+; 0.765 ; time_count[26]          ; time_count[26]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.059      ;
+; 0.765 ; time_count[24]          ; time_count[24]          ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.059      ;
+; 0.765 ; time_count[10]          ; time_count[10]          ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; \process_1:count[30]    ; \process_1:count[30]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.058      ;
+; 0.765 ; \process_1:count[24]    ; \process_1:count[24]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.058      ;
+; 0.766 ; \process_1:count[6]     ; \process_1:count[6]     ; Clock        ; Clock       ; 0.000        ; 0.080      ; 1.058      ;
+; 0.772 ; digit[1]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.065      ;
+; 0.772 ; digit[1]                ; digit[2]                ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.065      ;
+; 0.772 ; count[1]                ; Digits_out[2]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.066      ;
+; 0.775 ; count[1]                ; Digits_out[1]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.069      ;
+; 0.788 ; fsm.idle                ; \process_2:count[0]     ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.082      ;
+; 0.788 ; SensorRT:U1|count[30]   ; SensorRT:U1|count[30]   ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.081      ;
+; 0.789 ; numbers_array[2][3]     ; segment_data[3]         ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.083      ;
+; 0.789 ; numbers_array[2][1]     ; segment_data[1]         ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.083      ;
+; 0.789 ; count[1]                ; Digits_out[0]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.083      ;
+; 0.812 ; fsm.P3                  ; \process_2:count[8]     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.105      ;
+; 0.812 ; fsm.P3                  ; \process_2:count[14]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.105      ;
+; 0.814 ; fsm.P3                  ; \process_2:count[17]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.107      ;
+; 0.814 ; fsm.P3                  ; \process_2:count[29]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.107      ;
+; 0.815 ; fsm.P3                  ; \process_2:count[15]    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.108      ;
+; 0.815 ; fsm.idle                ; fsm.P1                  ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.109      ;
+; 0.820 ; count[1]                ; Digits_out[3]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.114      ;
+; 0.830 ; fsm.P4                  ; fsm.idle                ; Clock        ; Clock       ; 0.000        ; 0.082      ; 1.124      ;
+; 0.898 ; digit[0]                ; numbers_array[3][0]     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.191      ;
+; 0.902 ; SensorRT:U1|Data[9]     ; data[9]                 ; Clock        ; Clock       ; 0.000        ; 0.084      ; 1.198      ;
+; 0.919 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Idle    ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.212      ;
+; 0.929 ; digit[2]                ; numbers_array[3][2]     ; Clock        ; Clock       ; 0.000        ; 0.081      ; 1.222      ;
+; 0.939 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[8]     ; Clock        ; Clock       ; 0.000        ; 0.532      ; 1.683      ;
+; 0.939 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[6]     ; Clock        ; Clock       ; 0.000        ; 0.532      ; 1.683      ;
+; 0.946 ; SensorRT:U1|Data[10]    ; data[10]                ; Clock        ; Clock       ; 0.000        ; 0.084      ; 1.242      ;
+; 0.950 ; SensorRT:U1|Data[7]     ; data[7]                 ; Clock        ; Clock       ; 0.000        ; 0.084      ; 1.246      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[30]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[29]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[28]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[27]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[26]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[25]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[24]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[23]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[22]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
+; 0.996 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[21]    ; Clock        ; Clock       ; 0.000        ; 0.571      ; 1.779      ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
+-----------------------------------------------
+; Slow 1200mV 85C Model Metastability Summary ;
+-----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++-------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary               ;
++-----------+-----------------+------------+------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note ;
++-----------+-----------------+------------+------+
+; 11.38 MHz ; 11.38 MHz       ; Clock      ;      ;
++-----------+-----------------+------------+------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+---------+------------------+
+; Clock ; Slack   ; End Point TNS    ;
++-------+---------+------------------+
+; Clock ; -86.889 ; -3683.807        ;
++-------+---------+------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clock ; 0.401 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; Clock ; -3.000 ; -345.010                        ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'Clock'                                                                                          ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node             ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -86.889 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.262     ;
+; -86.888 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.261     ;
+; -86.888 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.261     ;
+; -86.886 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.259     ;
+; -86.886 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.259     ;
+; -86.884 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.257     ;
+; -86.884 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.257     ;
+; -86.884 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 88.257     ;
+; -86.638 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.016     ;
+; -86.637 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.015     ;
+; -86.637 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.015     ;
+; -86.635 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.013     ;
+; -86.635 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.013     ;
+; -86.633 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.011     ;
+; -86.633 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.011     ;
+; -86.633 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 88.011     ;
+; -86.536 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.911     ;
+; -86.535 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.910     ;
+; -86.535 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.910     ;
+; -86.533 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.908     ;
+; -86.533 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.908     ;
+; -86.531 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.906     ;
+; -86.531 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.906     ;
+; -86.531 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.906     ;
+; -86.531 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.906     ;
+; -86.530 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.905     ;
+; -86.530 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.905     ;
+; -86.528 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.903     ;
+; -86.528 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.903     ;
+; -86.527 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.902     ;
+; -86.526 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.901     ;
+; -86.526 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.901     ;
+; -86.526 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.901     ;
+; -86.526 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.901     ;
+; -86.526 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.901     ;
+; -86.524 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.899     ;
+; -86.524 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.899     ;
+; -86.522 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.897     ;
+; -86.522 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.897     ;
+; -86.522 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.897     ;
+; -86.443 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.816     ;
+; -86.440 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.813     ;
+; -86.439 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.812     ;
+; -86.439 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.812     ;
+; -86.437 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.810     ;
+; -86.437 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.810     ;
+; -86.435 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.808     ;
+; -86.435 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.808     ;
+; -86.435 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.808     ;
+; -86.426 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.801     ;
+; -86.425 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.800     ;
+; -86.425 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.800     ;
+; -86.423 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.798     ;
+; -86.423 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.798     ;
+; -86.421 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.796     ;
+; -86.421 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.796     ;
+; -86.421 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.796     ;
+; -86.376 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.058     ; 87.320     ;
+; -86.317 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.690     ;
+; -86.309 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.682     ;
+; -86.226 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.601     ;
+; -86.225 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.600     ;
+; -86.225 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.600     ;
+; -86.223 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.598     ;
+; -86.223 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.598     ;
+; -86.221 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.596     ;
+; -86.221 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.596     ;
+; -86.221 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.596     ;
+; -86.192 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 87.570     ;
+; -86.165 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[9]  ; Clock        ; Clock       ; 1.000        ; -0.058     ; 87.109     ;
+; -86.145 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[8]  ; Clock        ; Clock       ; 1.000        ; 0.333      ; 87.480     ;
+; -86.125 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.053     ; 87.074     ;
+; -86.123 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[18] ; Clock        ; Clock       ; 1.000        ; 0.368      ; 87.493     ;
+; -86.096 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[16] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.469     ;
+; -86.090 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.465     ;
+; -86.089 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[19] ; Clock        ; Clock       ; 1.000        ; 0.368      ; 87.459     ;
+; -86.085 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.460     ;
+; -86.081 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.456     ;
+; -86.080 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[14] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.453     ;
+; -86.079 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[7]  ; Clock        ; Clock       ; 1.000        ; -0.058     ; 87.023     ;
+; -86.066 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 87.444     ;
+; -86.058 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.376      ; 87.436     ;
+; -86.043 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[13] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.416     ;
+; -86.023 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.056     ; 86.969     ;
+; -86.018 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.056     ; 86.964     ;
+; -86.014 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.056     ; 86.960     ;
+; -85.994 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.367     ;
+; -85.994 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.367     ;
+; -85.993 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.366     ;
+; -85.993 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.366     ;
+; -85.991 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.364     ;
+; -85.991 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.364     ;
+; -85.989 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.362     ;
+; -85.989 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.362     ;
+; -85.989 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.362     ;
+; -85.980 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.355     ;
+; -85.974 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[15] ; Clock        ; Clock       ; 1.000        ; 0.368      ; 87.344     ;
+; -85.964 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[17] ; Clock        ; Clock       ; 1.000        ; 0.368      ; 87.334     ;
+; -85.964 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.373      ; 87.339     ;
+; -85.960 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[11] ; Clock        ; Clock       ; 1.000        ; 0.371      ; 87.333     ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'Clock'                                                                                              ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 0.401 ; fsm.P1                  ; fsm.P1                  ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; fsm.idle                ; fsm.idle                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; \process_2:count[0]     ; \process_2:count[0]     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; digit[3]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; digit[2]                ; digit[2]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.401 ; digit[1]                ; digit[1]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.669      ;
+; 0.402 ; SensorRT:U1|Ready       ; SensorRT:U1|Ready       ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Waiting ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|fsm.Rec     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; SensorRT:U1|fsm.Idle    ; SensorRT:U1|fsm.Idle    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.402 ; SensorRT:U1|fsm.Trans   ; SensorRT:U1|fsm.Trans   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.669      ;
+; 0.416 ; digit[0]                ; digit[0]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.684      ;
+; 0.463 ; digit[2]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.731      ;
+; 0.482 ; count[0]                ; Digits_out[0]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.751      ;
+; 0.483 ; count[0]                ; Digits_out[2]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.752      ;
+; 0.483 ; count[0]                ; Digits_out[3]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.752      ;
+; 0.484 ; count[0]                ; Digits_out[1]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.753      ;
+; 0.486 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Rec     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.753      ;
+; 0.514 ; SensorRT:U1|fsm.Idle    ; SensorRT:U1|Ready       ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.781      ;
+; 0.689 ; fsm.P1                  ; fsm.P2                  ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.957      ;
+; 0.693 ; \process_1:count[10]    ; \process_1:count[10]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.960      ;
+; 0.695 ; \process_1:count[9]     ; \process_1:count[9]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.962      ;
+; 0.697 ; \process_1:count[8]     ; \process_1:count[8]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.964      ;
+; 0.701 ; digit[0]                ; numbers_array[0][0]     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.970      ;
+; 0.701 ; digit[0]                ; numbers_array[1][0]     ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.970      ;
+; 0.704 ; time_count[13]          ; time_count[13]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.972      ;
+; 0.704 ; time_count[3]           ; time_count[3]           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.972      ;
+; 0.705 ; time_count[19]          ; time_count[19]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.973      ;
+; 0.705 ; time_count[29]          ; time_count[29]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.973      ;
+; 0.705 ; time_count[21]          ; time_count[21]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.973      ;
+; 0.705 ; time_count[11]          ; time_count[11]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.973      ;
+; 0.705 ; SensorRT:U1|count[29]   ; SensorRT:U1|count[29]   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.972      ;
+; 0.705 ; \process_1:count[5]     ; \process_1:count[5]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.972      ;
+; 0.706 ; time_count[17]          ; time_count[17]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.974      ;
+; 0.706 ; time_count[27]          ; time_count[27]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.974      ;
+; 0.706 ; time_count[1]           ; time_count[1]           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.974      ;
+; 0.706 ; SensorRT:U1|count[1]    ; SensorRT:U1|count[1]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.973      ;
+; 0.707 ; time_count[31]          ; time_count[31]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; time_count[22]          ; time_count[22]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.975      ;
+; 0.707 ; \process_1:count[18]    ; \process_1:count[18]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; \process_1:count[4]     ; \process_1:count[4]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; \process_1:count[2]     ; \process_1:count[2]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.974      ;
+; 0.707 ; \process_1:count[1]     ; \process_1:count[1]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.974      ;
+; 0.708 ; time_count[23]          ; time_count[23]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; time_count[25]          ; time_count[25]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.976      ;
+; 0.708 ; \process_1:count[28]    ; \process_1:count[28]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; \process_1:count[11]    ; \process_1:count[11]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.975      ;
+; 0.708 ; \process_1:count[3]     ; \process_1:count[3]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.975      ;
+; 0.709 ; time_count[16]          ; time_count[16]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.977      ;
+; 0.709 ; time_count[14]          ; time_count[14]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.977      ;
+; 0.709 ; time_count[2]           ; time_count[2]           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.977      ;
+; 0.709 ; \process_1:count[29]    ; \process_1:count[29]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; \process_1:count[27]    ; \process_1:count[27]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.976      ;
+; 0.709 ; \process_1:count[26]    ; \process_1:count[26]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.976      ;
+; 0.710 ; time_count[10]          ; time_count[10]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.978      ;
+; 0.710 ; time_count[4]           ; time_count[4]           ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.978      ;
+; 0.710 ; \process_1:count[30]    ; \process_1:count[30]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.977      ;
+; 0.710 ; \process_1:count[16]    ; \process_1:count[16]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.977      ;
+; 0.711 ; time_count[20]          ; time_count[20]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; time_count[30]          ; time_count[30]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; time_count[28]          ; time_count[28]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; time_count[26]          ; time_count[26]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.979      ;
+; 0.711 ; \process_1:count[6]     ; \process_1:count[6]     ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.978      ;
+; 0.712 ; time_count[24]          ; time_count[24]          ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.980      ;
+; 0.712 ; \process_1:count[24]    ; \process_1:count[24]    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 0.979      ;
+; 0.723 ; digit[1]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.991      ;
+; 0.723 ; digit[1]                ; digit[2]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.991      ;
+; 0.723 ; count[1]                ; Digits_out[2]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.992      ;
+; 0.726 ; count[1]                ; Digits_out[1]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 0.995      ;
+; 0.727 ; fsm.P3                  ; \process_2:count[8]     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.995      ;
+; 0.728 ; fsm.P3                  ; \process_2:count[14]    ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.996      ;
+; 0.730 ; fsm.P3                  ; \process_2:count[17]    ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.998      ;
+; 0.731 ; fsm.P3                  ; \process_2:count[15]    ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.999      ;
+; 0.731 ; fsm.P3                  ; \process_2:count[29]    ; Clock        ; Clock       ; 0.000        ; 0.073      ; 0.999      ;
+; 0.733 ; numbers_array[2][3]     ; segment_data[3]         ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.001      ;
+; 0.733 ; numbers_array[2][1]     ; segment_data[1]         ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.001      ;
+; 0.733 ; SensorRT:U1|count[30]   ; SensorRT:U1|count[30]   ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.000      ;
+; 0.735 ; fsm.idle                ; \process_2:count[0]     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.003      ;
+; 0.744 ; count[1]                ; Digits_out[0]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.013      ;
+; 0.761 ; fsm.idle                ; fsm.P1                  ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.029      ;
+; 0.767 ; count[1]                ; Digits_out[3]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.036      ;
+; 0.770 ; fsm.P4                  ; fsm.idle                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.038      ;
+; 0.837 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Idle    ; Clock        ; Clock       ; 0.000        ; 0.072      ; 1.104      ;
+; 0.843 ; SensorRT:U1|Data[9]     ; data[9]                 ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.112      ;
+; 0.848 ; digit[0]                ; numbers_array[3][0]     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.116      ;
+; 0.849 ; digit[2]                ; numbers_array[3][2]     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.117      ;
+; 0.869 ; SensorRT:U1|Data[10]    ; data[10]                ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.138      ;
+; 0.874 ; SensorRT:U1|Data[7]     ; data[7]                 ; Clock        ; Clock       ; 0.000        ; 0.074      ; 1.143      ;
+; 0.924 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[8]     ; Clock        ; Clock       ; 0.000        ; 0.497      ; 1.616      ;
+; 0.924 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[6]     ; Clock        ; Clock       ; 0.000        ; 0.497      ; 1.616      ;
+; 0.947 ; digit[3]                ; numbers_array[3][3]     ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.215      ;
+; 0.957 ; digit[0]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.225      ;
+; 0.958 ; numbers_array[1][0]     ; segment_data[0]         ; Clock        ; Clock       ; 0.000        ; 0.067      ; 1.220      ;
+; 0.960 ; digit[0]                ; digit[2]                ; Clock        ; Clock       ; 0.000        ; 0.073      ; 1.228      ;
+; 0.969 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[30]    ; Clock        ; Clock       ; 0.000        ; 0.537      ; 1.701      ;
+; 0.969 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[29]    ; Clock        ; Clock       ; 0.000        ; 0.537      ; 1.701      ;
+; 0.969 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[28]    ; Clock        ; Clock       ; 0.000        ; 0.537      ; 1.701      ;
+; 0.969 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[27]    ; Clock        ; Clock       ; 0.000        ; 0.537      ; 1.701      ;
+; 0.969 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[26]    ; Clock        ; Clock       ; 0.000        ; 0.537      ; 1.701      ;
+; 0.969 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[25]    ; Clock        ; Clock       ; 0.000        ; 0.537      ; 1.701      ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Slow 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+---------+------------------+
+; Clock ; Slack   ; End Point TNS    ;
++-------+---------+------------------+
+; Clock ; -41.111 ; -1651.023        ;
++-------+---------+------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; Clock ; 0.186 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; Clock ; -3.000 ; -248.640                        ;
++-------+--------+---------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'Clock'                                                                                          ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; Slack   ; From Node             ; To Node              ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+; -41.111 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.247     ;
+; -41.111 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.247     ;
+; -41.110 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.246     ;
+; -41.108 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.244     ;
+; -41.107 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.243     ;
+; -41.105 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.241     ;
+; -41.105 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.241     ;
+; -41.105 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.241     ;
+; -40.972 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.113     ;
+; -40.972 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.113     ;
+; -40.971 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.112     ;
+; -40.969 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.110     ;
+; -40.968 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.109     ;
+; -40.966 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.107     ;
+; -40.966 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.107     ;
+; -40.966 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 42.107     ;
+; -40.944 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.081     ;
+; -40.944 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.081     ;
+; -40.943 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.080     ;
+; -40.942 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.079     ;
+; -40.942 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.079     ;
+; -40.941 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.078     ;
+; -40.941 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.078     ;
+; -40.940 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.077     ;
+; -40.939 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.076     ;
+; -40.938 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.075     ;
+; -40.938 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.075     ;
+; -40.938 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.075     ;
+; -40.938 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.075     ;
+; -40.936 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.073     ;
+; -40.936 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.073     ;
+; -40.936 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.073     ;
+; -40.906 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.042     ;
+; -40.898 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 42.034     ;
+; -40.887 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.024     ;
+; -40.887 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.024     ;
+; -40.886 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.023     ;
+; -40.884 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.021     ;
+; -40.883 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.020     ;
+; -40.881 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.018     ;
+; -40.881 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.018     ;
+; -40.881 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.018     ;
+; -40.871 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.006     ;
+; -40.871 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.006     ;
+; -40.870 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.005     ;
+; -40.868 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.003     ;
+; -40.867 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.002     ;
+; -40.865 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.000     ;
+; -40.865 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.000     ;
+; -40.865 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 42.000     ;
+; -40.865 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.002     ;
+; -40.865 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.002     ;
+; -40.864 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 42.001     ;
+; -40.862 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.999     ;
+; -40.861 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.998     ;
+; -40.859 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.996     ;
+; -40.859 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.996     ;
+; -40.859 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.996     ;
+; -40.829 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.965     ;
+; -40.827 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.031     ; 41.783     ;
+; -40.767 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 41.908     ;
+; -40.767 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.904     ;
+; -40.767 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.904     ;
+; -40.766 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.903     ;
+; -40.764 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.901     ;
+; -40.763 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.900     ;
+; -40.761 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[23] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.898     ;
+; -40.761 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[27] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.898     ;
+; -40.761 ; SensorRT:U1|count[4]  ; SensorRT:U1|Data[28] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.898     ;
+; -40.760 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[18] ; Clock        ; Clock       ; 1.000        ; 0.147      ; 41.894     ;
+; -40.759 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 41.900     ;
+; -40.750 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[19] ; Clock        ; Clock       ; 1.000        ; 0.147      ; 41.884     ;
+; -40.739 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.876     ;
+; -40.737 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.874     ;
+; -40.734 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[9]  ; Clock        ; Clock       ; 1.000        ; -0.031     ; 41.690     ;
+; -40.731 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.868     ;
+; -40.729 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.866     ;
+; -40.708 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[8]  ; Clock        ; Clock       ; 1.000        ; 0.137      ; 41.832     ;
+; -40.703 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[16] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.839     ;
+; -40.696 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[14] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.832     ;
+; -40.690 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[13] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.826     ;
+; -40.690 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.154      ; 41.831     ;
+; -40.689 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[15] ; Clock        ; Clock       ; 1.000        ; 0.147      ; 41.823     ;
+; -40.688 ; SensorRT:U1|count[1]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.026     ; 41.649     ;
+; -40.684 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[17] ; Clock        ; Clock       ; 1.000        ; 0.147      ; 41.818     ;
+; -40.683 ; SensorRT:U1|count[31] ; SensorRT:U1|Data[7]  ; Clock        ; Clock       ; 1.000        ; -0.031     ; 41.639     ;
+; -40.682 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.819     ;
+; -40.674 ; SensorRT:U1|count[3]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.811     ;
+; -40.666 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 41.801     ;
+; -40.663 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[25] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.799     ;
+; -40.663 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[26] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.799     ;
+; -40.662 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[24] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.798     ;
+; -40.662 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.799     ;
+; -40.660 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[30] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.796     ;
+; -40.660 ; SensorRT:U1|count[6]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.030     ; 41.617     ;
+; -40.660 ; SensorRT:U1|count[7]  ; SensorRT:U1|Data[21] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.797     ;
+; -40.660 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[20] ; Clock        ; Clock       ; 1.000        ; 0.150      ; 41.797     ;
+; -40.659 ; SensorRT:U1|count[8]  ; SensorRT:U1|Data[29] ; Clock        ; Clock       ; 1.000        ; 0.149      ; 41.795     ;
+; -40.658 ; SensorRT:U1|count[2]  ; SensorRT:U1|Data[22] ; Clock        ; Clock       ; 1.000        ; 0.148      ; 41.793     ;
+; -40.658 ; SensorRT:U1|count[5]  ; SensorRT:U1|Data[10] ; Clock        ; Clock       ; 1.000        ; -0.030     ; 41.615     ;
++---------+-----------------------+----------------------+--------------+-------------+--------------+------------+------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'Clock'                                                                                              ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node               ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+; 0.186 ; fsm.P1                  ; fsm.P1                  ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; fsm.idle                ; fsm.idle                ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.186 ; \process_2:count[0]     ; \process_2:count[0]     ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.307      ;
+; 0.187 ; SensorRT:U1|Ready       ; SensorRT:U1|Ready       ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Waiting ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|fsm.Rec     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; SensorRT:U1|fsm.Idle    ; SensorRT:U1|fsm.Idle    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; digit[3]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; digit[2]                ; digit[2]                ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; digit[1]                ; digit[1]                ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.187 ; SensorRT:U1|fsm.Trans   ; SensorRT:U1|fsm.Trans   ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.307      ;
+; 0.194 ; digit[0]                ; digit[0]                ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.314      ;
+; 0.203 ; SensorRT:U1|fsm.Waiting ; SensorRT:U1|fsm.Rec     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.323      ;
+; 0.203 ; digit[2]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.323      ;
+; 0.211 ; count[0]                ; Digits_out[0]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.332      ;
+; 0.213 ; count[0]                ; Digits_out[2]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.334      ;
+; 0.214 ; count[0]                ; Digits_out[3]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.335      ;
+; 0.215 ; count[0]                ; Digits_out[1]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.336      ;
+; 0.217 ; SensorRT:U1|fsm.Idle    ; SensorRT:U1|Ready       ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.337      ;
+; 0.288 ; digit[0]                ; numbers_array[0][0]     ; Clock        ; Clock       ; 0.000        ; 0.038      ; 0.410      ;
+; 0.288 ; digit[0]                ; numbers_array[1][0]     ; Clock        ; Clock       ; 0.000        ; 0.038      ; 0.410      ;
+; 0.290 ; fsm.P1                  ; fsm.P2                  ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.411      ;
+; 0.299 ; \process_1:count[10]    ; \process_1:count[10]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; \process_1:count[9]     ; \process_1:count[9]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.419      ;
+; 0.299 ; \process_1:count[8]     ; \process_1:count[8]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.419      ;
+; 0.303 ; time_count[31]          ; time_count[31]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.424      ;
+; 0.303 ; time_count[13]          ; time_count[13]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.424      ;
+; 0.303 ; time_count[3]           ; time_count[3]           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.424      ;
+; 0.304 ; time_count[17]          ; time_count[17]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; time_count[19]          ; time_count[19]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; time_count[29]          ; time_count[29]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; time_count[27]          ; time_count[27]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; time_count[21]          ; time_count[21]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; time_count[11]          ; time_count[11]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; time_count[1]           ; time_count[1]           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.425      ;
+; 0.304 ; SensorRT:U1|count[29]   ; SensorRT:U1|count[29]   ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; SensorRT:U1|count[1]    ; SensorRT:U1|count[1]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.424      ;
+; 0.304 ; \process_1:count[5]     ; \process_1:count[5]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.424      ;
+; 0.305 ; time_count[23]          ; time_count[23]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; time_count[25]          ; time_count[25]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; time_count[22]          ; time_count[22]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; time_count[16]          ; time_count[16]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; time_count[14]          ; time_count[14]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; time_count[2]           ; time_count[2]           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.426      ;
+; 0.305 ; \process_1:count[30]    ; \process_1:count[30]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; \process_1:count[4]     ; \process_1:count[4]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; \process_1:count[2]     ; \process_1:count[2]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.425      ;
+; 0.305 ; \process_1:count[1]     ; \process_1:count[1]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.425      ;
+; 0.306 ; time_count[20]          ; time_count[20]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; time_count[30]          ; time_count[30]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; time_count[24]          ; time_count[24]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; time_count[10]          ; time_count[10]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; time_count[4]           ; time_count[4]           ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.427      ;
+; 0.306 ; \process_1:count[29]    ; \process_1:count[29]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; \process_1:count[28]    ; \process_1:count[28]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; \process_1:count[26]    ; \process_1:count[26]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; \process_1:count[18]    ; \process_1:count[18]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; \process_1:count[16]    ; \process_1:count[16]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; \process_1:count[11]    ; \process_1:count[11]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; \process_1:count[6]     ; \process_1:count[6]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.306 ; \process_1:count[3]     ; \process_1:count[3]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.426      ;
+; 0.307 ; time_count[28]          ; time_count[28]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.428      ;
+; 0.307 ; time_count[26]          ; time_count[26]          ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.428      ;
+; 0.307 ; \process_1:count[27]    ; \process_1:count[27]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.427      ;
+; 0.307 ; \process_1:count[24]    ; \process_1:count[24]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.427      ;
+; 0.312 ; fsm.P3                  ; \process_2:count[8]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.432      ;
+; 0.313 ; fsm.P3                  ; \process_2:count[14]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.433      ;
+; 0.315 ; fsm.P3                  ; \process_2:count[17]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.435      ;
+; 0.315 ; fsm.P3                  ; \process_2:count[29]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.435      ;
+; 0.315 ; digit[1]                ; digit[3]                ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.435      ;
+; 0.316 ; fsm.P3                  ; \process_2:count[15]    ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.436      ;
+; 0.316 ; digit[1]                ; digit[2]                ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.436      ;
+; 0.316 ; count[1]                ; Digits_out[2]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.437      ;
+; 0.317 ; numbers_array[2][3]     ; segment_data[3]         ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.438      ;
+; 0.317 ; numbers_array[2][1]     ; segment_data[1]         ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.438      ;
+; 0.318 ; SensorRT:U1|count[30]   ; SensorRT:U1|count[30]   ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.438      ;
+; 0.318 ; count[1]                ; Digits_out[1]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.439      ;
+; 0.321 ; fsm.idle                ; \process_2:count[0]     ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.442      ;
+; 0.324 ; count[1]                ; Digits_out[0]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.445      ;
+; 0.331 ; fsm.idle                ; fsm.P1                  ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.452      ;
+; 0.334 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[8]     ; Clock        ; Clock       ; 0.000        ; 0.220      ; 0.638      ;
+; 0.334 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[6]     ; Clock        ; Clock       ; 0.000        ; 0.220      ; 0.638      ;
+; 0.335 ; SensorRT:U1|Data[9]     ; data[9]                 ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.456      ;
+; 0.342 ; count[1]                ; Digits_out[3]~reg0      ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.463      ;
+; 0.343 ; fsm.P4                  ; fsm.idle                ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.464      ;
+; 0.348 ; SensorRT:U1|Data[10]    ; data[10]                ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.469      ;
+; 0.351 ; SensorRT:U1|Data[7]     ; data[7]                 ; Clock        ; Clock       ; 0.000        ; 0.037      ; 0.472      ;
+; 0.362 ; digit[0]                ; numbers_array[3][0]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.482      ;
+; 0.379 ; digit[2]                ; numbers_array[3][2]     ; Clock        ; Clock       ; 0.000        ; 0.036      ; 0.499      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[30]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[29]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[28]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[27]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[26]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[25]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[24]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[23]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[22]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[21]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
+; 0.380 ; SensorRT:U1|fsm.Rec     ; SensorRT:U1|Data[20]    ; Clock        ; Clock       ; 0.000        ; 0.232      ; 0.696      ;
++-------+-------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
+
+
+----------------------------------------------
+; Fast 1200mV 0C Model Metastability Summary ;
+----------------------------------------------
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
+
+
++---------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                             ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Clock            ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+-----------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -95.248   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+;  Clock           ; -95.248   ; 0.186 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -4034.884 ; 0.0   ; 0.0      ; 0.0     ; -345.01             ;
+;  Clock           ; -4034.884 ; 0.000 ; N/A      ; N/A     ; -345.010            ;
++------------------+-----------+-------+----------+---------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                                                                     ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; Pin            ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ; EBD File Name ; EBD Signal Name ; EBD Far-end ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+; SensorTrig     ; 3.3-V LVTTL  ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Digits_out[3]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Digits_out[2]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Digits_out[1]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Digits_out[0]  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[7] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[6] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[5] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[4] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[3] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[2] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[1] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; Segment_out[0] ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ; n/a           ; n/a             ; n/a         ;
++----------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+---------------+-----------------+-------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; Clock                   ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; SensorEcho              ; 3.3-V LVTTL  ; 2640 ps         ; 2640 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SensorTrig     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 6.38e-09 V                   ; 3.12 V              ; -0.0818 V           ; 0.205 V                              ; 0.244 V                              ; 8.86e-10 s                  ; 6.56e-10 s                  ; No                         ; No                         ; 3.08 V                      ; 6.38e-09 V                  ; 3.12 V             ; -0.0818 V          ; 0.205 V                             ; 0.244 V                             ; 8.86e-10 s                 ; 6.56e-10 s                 ; No                        ; No                        ;
+; Digits_out[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Digits_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.33 V              ; -0.00425 V          ; 0.168 V                              ; 0.058 V                              ; 3.12e-09 s                  ; 2.87e-09 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.33 V             ; -0.00425 V         ; 0.168 V                             ; 0.058 V                             ; 3.12e-09 s                 ; 2.87e-09 s                 ; Yes                       ; Yes                       ;
+; Digits_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Digits_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.8e-09 V                    ; 2.37 V              ; -0.00373 V          ; 0.104 V                              ; 0.011 V                              ; 4.34e-10 s                  ; 3.82e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.8e-09 V                   ; 2.37 V             ; -0.00373 V         ; 0.104 V                             ; 0.011 V                             ; 4.34e-10 s                 ; 3.82e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.74e-09 V                   ; 2.37 V              ; -0.0346 V           ; 0.198 V                              ; 0.094 V                              ; 3.14e-10 s                  ; 2.92e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.74e-09 V                  ; 2.37 V             ; -0.0346 V          ; 0.198 V                             ; 0.094 V                             ; 3.14e-10 s                 ; 2.92e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.57e-09 V                   ; 2.37 V              ; -0.00683 V          ; 0.171 V                              ; 0.018 V                              ; 4.97e-10 s                  ; 6.66e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.57e-09 V                  ; 2.37 V             ; -0.00683 V         ; 0.171 V                             ; 0.018 V                             ; 4.97e-10 s                 ; 6.66e-10 s                 ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Slow 1200mv 85c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SensorTrig     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.08 V                       ; 5.04e-07 V                   ; 3.11 V              ; -0.0469 V           ; 0.191 V                              ; 0.215 V                              ; 1.08e-09 s                  ; 8.62e-10 s                  ; Yes                        ; No                         ; 3.08 V                      ; 5.04e-07 V                  ; 3.11 V             ; -0.0469 V          ; 0.191 V                             ; 0.215 V                             ; 1.08e-09 s                 ; 8.62e-10 s                 ; Yes                       ; No                        ;
+; Digits_out[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Digits_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.33 V              ; -0.00229 V          ; 0.111 V                              ; 0.057 V                              ; 3.78e-09 s                  ; 3.5e-09 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.33 V             ; -0.00229 V         ; 0.111 V                             ; 0.057 V                             ; 3.78e-09 s                 ; 3.5e-09 s                  ; Yes                       ; Yes                       ;
+; Digits_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Digits_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.85e-07 V                   ; 2.35 V              ; -0.0123 V           ; 0.144 V                              ; 0.042 V                              ; 4.81e-10 s                  ; 4.81e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.85e-07 V                  ; 2.35 V             ; -0.0123 V          ; 0.144 V                             ; 0.042 V                             ; 4.81e-10 s                 ; 4.81e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.55e-07 V                   ; 2.35 V              ; -0.00221 V          ; 0.097 V                              ; 0.005 V                              ; 4.49e-10 s                  ; 3.85e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.55e-07 V                  ; 2.35 V             ; -0.00221 V         ; 0.097 V                             ; 0.005 V                             ; 4.49e-10 s                 ; 3.85e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 2.54e-07 V                   ; 2.34 V              ; -0.00774 V          ; 0.109 V                              ; 0.026 V                              ; 6.58e-10 s                  ; 8.24e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 2.54e-07 V                  ; 2.34 V             ; -0.00774 V         ; 0.109 V                             ; 0.026 V                             ; 6.58e-10 s                 ; 8.24e-10 s                 ; Yes                       ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Signal Integrity Metrics (Fast 1200mv 0c Model)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin            ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; SensorTrig     ; 3.3-V LVTTL  ; 0 s                 ; 0 s                 ; 3.46 V                       ; 1.25e-07 V                   ; 3.57 V              ; -0.0855 V           ; 0.315 V                              ; 0.175 V                              ; 6.79e-10 s                  ; 6.15e-10 s                  ; No                         ; No                         ; 3.46 V                      ; 1.25e-07 V                  ; 3.57 V             ; -0.0855 V          ; 0.315 V                             ; 0.175 V                             ; 6.79e-10 s                 ; 6.15e-10 s                 ; No                        ; No                        ;
+; Digits_out[3]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Digits_out[2]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.64 V              ; -0.0113 V           ; 0.208 V                              ; 0.179 V                              ; 2.38e-09 s                  ; 2.23e-09 s                  ; No                         ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.64 V             ; -0.0113 V          ; 0.208 V                             ; 0.179 V                             ; 2.38e-09 s                 ; 2.23e-09 s                 ; No                        ; Yes                       ;
+; Digits_out[1]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Digits_out[0]  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[7] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[6] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[5] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[4] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[3] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[2] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[1] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; Segment_out[0] ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.05e-08 V                   ; 2.72 V              ; -0.0349 V           ; 0.173 V                              ; 0.1 V                                ; 2.72e-10 s                  ; 2.69e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 4.05e-08 V                  ; 2.72 V             ; -0.0349 V          ; 0.173 V                             ; 0.1 V                               ; 2.72e-10 s                 ; 2.69e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.22e-08 V                   ; 2.74 V              ; -0.06 V             ; 0.158 V                              ; 0.08 V                               ; 2.68e-10 s                  ; 2.19e-10 s                  ; Yes                        ; Yes                        ; 2.62 V                      ; 2.22e-08 V                  ; 2.74 V             ; -0.06 V            ; 0.158 V                             ; 0.08 V                              ; 2.68e-10 s                 ; 2.19e-10 s                 ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~  ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.54e-08 V                   ; 2.7 V               ; -0.00943 V          ; 0.276 V                              ; 0.035 V                              ; 3.19e-10 s                  ; 4.99e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 3.54e-08 V                  ; 2.7 V              ; -0.00943 V         ; 0.276 V                             ; 0.035 V                             ; 3.19e-10 s                 ; 4.99e-10 s                 ; No                        ; Yes                       ;
++----------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-----------------------------------------------------------------------+
+; Setup Transfers                                                       ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; Clock      ; Clock    ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-----------------------------------------------------------------------+
+; Hold Transfers                                                        ;
++------------+----------+--------------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths     ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+--------------+----------+----------+----------+
+; Clock      ; Clock    ; > 2147483647 ; 0        ; 0        ; 0        ;
++------------+----------+--------------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No non-DPA dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths Summary                    ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 68    ; 68   ;
+; Unconstrained Output Ports      ; 12    ; 12   ;
+; Unconstrained Output Port Paths ; 30    ; 30   ;
++---------------------------------+-------+------+
+
+
++-------------------------------------+
+; Clock Status Summary                ;
++--------+-------+------+-------------+
+; Target ; Clock ; Type ; Status      ;
++--------+-------+------+-------------+
+; Clock  ; Clock ; Base ; Constrained ;
++--------+-------+------+-------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; SensorEcho ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; Digits_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Digits_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Digits_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Digits_out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SensorTrig     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------+
+; Unconstrained Input Ports                                                                         ;
++------------+--------------------------------------------------------------------------------------+
+; Input Port ; Comment                                                                              ;
++------------+--------------------------------------------------------------------------------------+
+; SensorEcho ; No input delay, min/max delays, false-path exceptions, or max skew assignments found ;
++------------+--------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------+
+; Unconstrained Output Ports                                                                             ;
++----------------+---------------------------------------------------------------------------------------+
+; Output Port    ; Comment                                                                               ;
++----------------+---------------------------------------------------------------------------------------+
+; Digits_out[0]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Digits_out[1]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Digits_out[2]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Digits_out[3]  ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[0] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[1] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[2] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[3] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[4] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[5] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; Segment_out[6] ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
+; SensorTrig     ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
++----------------+---------------------------------------------------------------------------------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Timing Analyzer
+    Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+    Info: Processing started: Sat Jun 29 20:40:58 2019
+Info: Command: quartus_sta rangefinder -c rangefinder
+Info: qsta_default_script.tcl version: #1
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'rangefinder.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name Clock Clock
+Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -95.248
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -95.248           -4034.884 Clock 
+Info (332146): Worst-case hold slack is 0.452
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.452               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -345.010 Clock 
+Info (332114): Report Metastability: Found 31 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Slow 1200mV 0C Model
+Info (334003): Started post-fitting delay annotation
+Info (334004): Delay annotation completed successfully
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -86.889
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -86.889           -3683.807 Clock 
+Info (332146): Worst-case hold slack is 0.401
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.401               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -345.010 Clock 
+Info (332114): Report Metastability: Found 31 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info: Analyzing Fast 1200mV 0C Model
+Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
+Critical Warning (332148): Timing requirements not met
+    Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
+Info (332146): Worst-case setup slack is -41.111
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):   -41.111           -1651.023 Clock 
+Info (332146): Worst-case hold slack is 0.186
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):     0.186               0.000 Clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -3.000
+    Info (332119):     Slack       End Point TNS Clock 
+    Info (332119): ========= =================== =====================
+    Info (332119):    -3.000            -248.640 Clock 
+Info (332114): Report Metastability: Found 31 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4769 megabytes
+    Info: Processing ended: Sat Jun 29 20:41:02 2019
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+

@@ -1,0 +1,19 @@
+D:/My_Designs/rangefinder/Radar.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/rangefinder/Radar.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity Radar
+-- Compiling architecture SYN of RAdar
+
+} {} {}} D:/My_Designs/rangefinder/SensorRT.vhd {1 {vcom -work work -2002 -explicit -stats=none D:/My_Designs/rangefinder/SensorRT.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package std_logic_arith
+-- Compiling entity SensorRT
+-- Compiling architecture SYN of SensorRT
+
+} {} {}}

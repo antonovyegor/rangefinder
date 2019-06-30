@@ -1,0 +1,15 @@
+
+State Machine - |Radar|fsm
+Name fsm.P4 fsm.P3 fsm.P2 fsm.P1 fsm.idle 
+fsm.idle 0 0 0 0 0 
+fsm.P1 0 0 0 1 1 
+fsm.P2 0 0 1 0 1 
+fsm.P3 0 1 0 0 1 
+fsm.P4 1 0 0 0 1 
+
+State Machine - |Radar|SensorRT:U1|fsm
+Name fsm.Rec fsm.Waiting fsm.Trans fsm.Idle 
+fsm.Idle 0 0 0 0 
+fsm.Trans 0 0 1 1 
+fsm.Waiting 0 1 0 1 
+fsm.Rec 1 0 0 1 

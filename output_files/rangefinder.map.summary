@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Sat Jun 29 20:40:40 2019
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : rangefinder
+Top-level Entity Name : Radar
+Family : Cyclone IV E
+Total logic elements : 1,486
+    Total combinational functions : 1,435
+    Dedicated logic registers : 230
+Total registers : 230
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
